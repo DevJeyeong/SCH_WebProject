@@ -1,0 +1,294 @@
+/* 페이지 공통 적용 부분 */
+* {
+    margin:0;
+    padding:0;
+}
+html {
+    width:100%;
+    height:100%;
+    font-family:'Noto Sans KR', sans-serif
+}
+body {
+    display:flex;
+    justify-content:center;
+    width:100%;
+    height:100%;
+}
+
+.linker {
+    text-decoration:none;
+    color:green;
+}
+.linker:before {
+    content:"#";
+    color:white;
+    background-color:green;
+    padding:0 .1em 0 .1em;
+    margin:0 .2em 0 0;
+}
+.linker:hover{
+    text-decoration:underline;
+}
+.profile_pic {
+    display:inline-block;
+    width:10em;
+    height:10em;
+    border-radius:50%;
+    border:.5em solid skyblue;
+    text-align:center;
+}
+
+/* 헤더(fixed) 공통 부분 */
+
+.header {
+    width:100%;
+    height:3.5em;
+    background:#aaa;
+    position:fixed;
+    display:flex;
+    align-items:center;
+    user-select:none;
+    z-index:2;
+}
+.header > * {
+    display:flex;
+    font-family:'Noto Sans KR', sans-serif;
+}
+.header > *:first-child {
+    width:70%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    white-space:nowrap;
+}
+.header > *:first-child > *:first-child {
+    margin-left:1em;
+    margin-right:1em;
+    font-family: 'Kirang Haerang', cursive;
+    font-size:2em;
+}
+.header > *:last-child {
+    width:30%;
+    height:100%;
+    justify-content:flex-end;
+    align-items:center;
+    white-space:nowrap;
+    margin-right:1em;
+}
+.header > * > div {
+    display:flex;
+    height:100%;
+    align-items:center;
+    padding:0 1em 0 1em;
+    transition:.3s all;
+}
+.header > * > div:hover:not(.nonclick) {
+    background:#eee;
+    cursor:pointer;
+}
+.effect {
+    background:#eee;
+}
+.contents {
+    width:90%;
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    padding-top:4em;
+}
+
+.spark {
+    animation-name:nextSpark;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes nextSpark {
+    0% {background-color:#aaa; color:black;}
+    50% {background-color:red; color:white;}
+    100% {background-color:#aaa; color:black;}
+}
+
+/* 메인 페이지 부분 */
+.main {
+    text-align:center;
+    margin-bottom:6em;
+    user-select:none;
+}
+.nd_sqaure_box_list {
+    display:inline-flex;
+    flex-direction:column;
+    margin-top:1em;
+    margin-bottom:1em;
+}
+.rd_sqaure_box_list:first-child {
+    display:inline-flex;
+    justify-content:center;
+    align-items:flex-end;
+}
+.rd_sqaure_box_list:last-child {
+    display:inline-flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+.rd_sqaure_box_list:first-child > .box {
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    width:16em;
+    height:16em;
+    background-position:center center, center center;
+    background-repeat:no-repeat, no-repeat;
+    background-size:cover, cover;
+    transition:.3s all;
+}
+.rd_sqaure_box_list:last-child > .box {
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    width:24em;
+    height:16em;
+    background-position:center center, center center;
+    background-repeat:no-repeat, no-repeat;
+    background-size:cover, cover;
+    transition:.3s all;
+}
+.rd_sqaure_box_list > .box > span{
+    padding:.5em;
+    color:white;
+}
+.rd_sqaure_box_list > .box:hover {
+    cursor:pointer;
+    padding:.5em;
+    border:.3em solid skyblue;
+}
+
+.write {
+    background:linear-gradient(to top, rgb(90, 90, 90), rgba(255,255,255,0)), url('./aesop.png');
+}
+.char {
+    background-image:linear-gradient(to top,rgb(90, 90, 90), rgba(255,255,255,0)), url('./wolf.jpg');
+}
+.story {
+    background-image:linear-gradient(to top, rgb(90, 90, 90), rgba(0,0,0,0)), url('./boy.png');
+}
+.fable {
+    background-image:linear-gradient(to top, rgb(90, 90, 90), rgba(0,0,0,0)), url('./fable.jpg');
+}
+.git {
+    background-image:linear-gradient(to top, rgb(90, 90, 90), rgba(0,0,0,0)), url('./github.png');
+}
+
+/* 공통 푸터 부분 */
+
+.main_footer {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin-top:2em;
+    margin-bottom:2em;
+}
+
+.main_footer > * {
+    margin:0 .2em 0 .2em;
+    transition:.1s all;
+}
+.main_footer > img:hover {
+    height:28px;
+    margin:0 .3em 0 .3em;
+    border:.3em solid skyblue;
+}
+
+/* 캐릭터 소개 부분 */
+.introduce_char {
+    margin-top:1em;
+    border-collapse:collapse;
+    border-spacing:0;
+    font-family:'Noto Serif KR', serif;
+}
+
+.introduce_char > tbody > tr > td {
+    padding:1.5em;
+    text-align:center;
+}
+.introduce_char > tbody > tr > td:nth-child(odd) {
+    border-bottom:1px solid black;
+    padding:1em 0 1em 0;
+}
+.profile_text {
+    font-family:'Poor Story', cursive;
+}
+
+/* 작가 소개 부분 */
+
+.introduce_writer {
+    text-align:center;
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+.introduce_writer > tbody > tr > td {
+    padding:.5em .2em .5em .2em;
+    border-bottom:1px solid black;
+    width:50%;
+}
+
+/* 스토리 전개 부분 */
+.canvas {
+    display:inline-flex;
+    align-self:center;
+
+    width:1366px;
+    height:768px;
+    font-size:20px;
+
+    justify-content:center;
+    align-items:center;
+
+    border:.2em solid grey;
+    margin:.2em;
+
+    transition:0.2s all ease-in-out;
+    user-select:none;
+}
+
+.canvas_background {
+    position:absolute;
+
+    width:1366px;
+    height:768px;
+    
+    margin:0;
+    padding:0;
+    opacity:0;
+
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+
+    transition:.3s all;
+}
+
+.canvas > *:not(.canvas_background) {
+    font-size:20px;
+    width:calc(1366px - 2.5em);
+    height:calc(768px - 2.5em);
+    position:absolute;
+    z-index:1;
+}
+
+.canvas > * > span {
+    font-family: 'Poor Story', cursive;
+    transition:.2s all;
+    opacity:0;
+}
+
+.hide {
+    width:0;
+    height:0;
+    overflow:hidden;
+    border:none;
+    margin:0;
+    padding:0;
+}

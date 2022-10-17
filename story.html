@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Kirang+Haerang&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Poor+Story&family=Yeon+Sung&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+        <script src="./style/script.js"></script>
+        <script src="./style/story.js"></script>
+        <title>양치기 소년</title>
+    </head>
+    <body>
+        <div class="header" id="head">
+            <div>
+                <div onclick="goMain()">양치기 소년</div>
+                <div onclick="goWriter()">작가 소개</div>
+                <div onclick="goChar()">캐릭터 소개</div>
+                <div class="effect" onclick="goStory()">내용 읽으러 가기</div>
+            </div>
+            <div>
+                <div onclick="setPage()">(<span id="nowPage">0</span>/<span id="lastPage">0</span>)</div>
+                <div onclick="prevPage()">&lt;</div>
+                <div id="nextPage" onclick="nextPage()">&gt;</div>
+            </div>
+        </div>
+        <div class="contents" id="main">
+            <h2 style="padding-bottom:.5em;"><span style="font-family:'Kirang Haerang', cursive; font-size:1.5em;">양치기 소년</span>&nbsp;을 읽어봅시다</h2>
+            <hr>
+            <h4>※ 1920 x 1080 이상의 해상도에서 감상하길 권장드립니다. 또한 한 장의 이야기가 끝난 후 페이지를 넘길 수 있습니다</h4><br>
+            <div class="canvas">
+                <div class="canvas_background" style="background-color:rgb(200, 200, 200); opacity:0.5"></div>    
+                <div class="canvas_background" id="background1"></div>    
+                <div class="canvas_background" id="background2"></div>    
+                <div id="page1">
+                    <span id="page1_text1" style="font-size:1.4em; font-weight:bold;">'탈무드'라는 책에는 거짓말쟁이가 받는 최대의 벌은 거짓말쟁이가 진실을 말해도 아무도 믿지 않는다는 말이 있어요.</span><br>
+                    <span id="page1_text2" style="font-size:1.3em; margin-left:2em;">사람들이 내 말을 믿지 않으면 슬프겠지요? 이러한 예시를 단적으로 보여주는 이야기가 있습니다.</span><br><br>
+                    <span id="page1_text3">어느 커다란 평야 마을에서 일어난 일입니다. 양치기 소년이 있었습니다.</span>
+                    <span id="page1_text4">소년은 매일 양 떼를 데리고 언덕 풀밭으로 갔습니다.</span><br>
+                    <span id="page1_text5">소년은 양들에게 "얘들아, 많이 먹어!" 라고 말하고 나무에 기대서 쉬고 있습니다.</span><br><br>
+                    <span id="page1_text6">어느 날과 다름없이 양을 치며 쉬고 있던 소년은, 지루해하던 와중</span>
+                    <span id="page1_text7">뒷산에 산다는 늑대가 생각났습니다.</span><br>
+                    <span id="page1_text8">마을 사람들의 말로는 성질이 더러운 늑대여서 사람도 잡아먹는다고 하더라~ 랍니다.</span><br><br>
+                    <span id="page1_text9" style="font-size:1.25em; font-weight:bold;">심심했던 소년은 장난을 한번 쳐보기로 결심합니다. (다음 페이지로)</span>
+                </div>
+                <div class="hide" id="page2" style="text-align:right">
+                    <span id="page2_text1" style="font-size:3em; font-weight:bold;">늑대다! 늑대가 나타났다!</span><br><br>
+                    <span id="page2_text2">소년은 큰 소리로 외쳤습니다. 물론 장난이였지만요.</span><br>
+                    <span id="page2_text3">한편, 마을 사람들은 이를 듣고 늑대를 쫓아내기 위해 무장을 하고 목장으로 갑니다.</span><br><br>
+                    <span id="page2_text4">마을 사람들은 소년에게 늑대가 어딨냐고 물었고,</span>
+                    <span id="page2_text5" style="font-size:1.25em; font-weight:bold;">소년은 뻥이라고 답했습니다.</span><br>
+                    <span id="page2_text6">마을 사람들은 소년의 거짓말에 크게 화를 냈고, 소년은 늑대가 나타났을 때를 상정해 연습삼아 해봤다며 얼버무렸습니다.</span><br><br>
+                    <span id="page2_text7">마을 사람들은 그렇게 돌아갔습니다. 그리고 다음 날이 되었습니다. (다음 페이지로)</span><br>                
+                </div>
+                <div class="hide" id="page3" style="text-align:right">
+                    <span id="page3_text1" style="font-size:3em; font-weight:bold;">늑대다! 늑대가 나타났다!</span><br><br>
+                    <span id="page3_text2">소년은 또 큰 소리로 외쳤습니다. 장난도 지나치죠.</span><br>
+                    <span id="page3_text3">마을 사람들은 어제는 장난이였으니, 오늘은 진짜일것이라 믿고 달려갔습니다.</span><br><br>
+                    <span id="page3_text4">마을 사람들은 진심어린 걱정을 하며</span><br>
+                    <span id="page3_text5">양이 다치지는 않았는지, 늑대가 어딨는지 물었지만,</span>
+                    <span id="page3_text6" style="font-size:1.25em; font-weight:bold;">소년은 역시나 뻥이라고 답했습니다.</span><br>
+                    <span id="page3_text7">마을 사람들은 또 소년의 거짓말에 화를 냈고</span>
+                    <span id="page3_text8" style="font-size:1.25em; font-weight:bold;">장난을 그만치라 단호하게 경고했습니다.</span><br><br>
+                    <span id="page3_text9" style="font-size:1.5em; font-weight:bold;">그렇지만 소년은 정도를 모르고 며칠 사이 계속 장난을 치게 됩니다. (다음 페이지로)</span><br>                
+                </div>
+                <div class="hide" id="page4" style="text-align:right">
+                    <span id="page4_text1" style="font-size:1.25em;">이로부터 며칠이 지났습니다. <b>어디선가 수상한게 보이더니 진짜 늑대였습니다.</b> 소년은 소리를 질렀습니다</span><br>
+                    <span id="page4_text2" style="font-size:2.5em; font-weight:bold;">늑대다!</span>
+                    <span id="page4_text3" style="font-size:4em; font-weight:bold;">이번엔 진짜 늑대가 나타났다!</span><br><br>
+                    <span id="page4_text4" style="font-size:1.25em;">마을 사람들은 도가 지나친 소년을 무시해버렸습니다.</span><br><br>
+                    <span id="page4_text5" style="font-size:1.5em; font-weight:bold;">"흥, 또 장난치는 거겠지"</span><br>
+                    <span id="page4_text6" style="font-size:1.5em; font-weight:bold;">"누가 속을줄 아냐보다!"</span><br>
+                    <span id="page4_text7" style="font-size:1.5em; font-weight:bold;">"진짜라고 해도 안 도와줄 거다!"</span><br><br>
+                    <span id="page4_text8" style="font-size:1.3em; font-weight:bold;">소년은 이미 마을 사람들에게 신뢰를 잃어버렸습니다. (다음 페이지로)</span>
+                </div>
+                <div class="hide" id="page5">
+                    <span id="page5_text1" style="font-size:2em; font-weight:bold;">결국, </span>
+                    <span id="page5_text2" style="font-size:2em; font-weight:bold;">양들은 모두 잡아먹히거나 늑대를 피해 도망가버렸습니다.</span><br>
+                    <span id="page5_text3" style="font-size:1.25em;">소년은 그렇게 많던 양들을 모두 잃어버리게 되었습니다. 나무 한그루만 남아있었을 뿐입니다.</span><br><br>
+                    <span id="page5_text4">우리는 이 '양치기 소년'을 통해서,</span><br>
+                    <span id="page5_text5" style="font-size:1.25em; font-weight:bold;">콩으로 메주를 쑨다 해도 곧이듣지 않는다 또는</span>
+                    <span id="page5_text6" style="font-size:1.25em; font-weight:bold;">장난도 지나치면 과하다는 교훈을 얻을 수 있습니다.</span><br>
+                    <span id="page5_text7" style="font-size:1.5em; font-weight:bold;">장난도 적당히 치는게 중요합니다. 꼭 이 사실을 명심하도록 합시다.</span>
+                </div>
+            </div>
+            <div class="main_footer">
+                <span>Copyright ⓒ 2022, All Right Reserved by</span>
+                <img src="./style/SCH.jpg" style="height:24px; cursor:pointer" onclick="goLink('https://home.sch.ac.kr/sch/index.jsp')" alt="순천향대학교(SoonCheonHyang Univ.)" title="순천향대 홈페이지로 이동">
+                <span>컴퓨터소프트웨어공학과 20223517 방제영</span>
+            </div>
+        </div>
+    </body>
+</html>

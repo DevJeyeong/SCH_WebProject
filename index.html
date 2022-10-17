@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Kirang+Haerang&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Poor+Story&family=Yeon+Sung&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style/style.css">
+        <script src="./style/script.js"></script>
+        <title>양치기 소년</title>
+    </head>
+    <body>
+        <div class="header" id="head">
+            <div>
+                <div class="effect" onclick="goMain()">양치기 소년</div>
+                <div onclick="goWriter()">작가 소개</div>
+                <div onclick="goChar()">캐릭터 소개</div>
+                <div onclick="goStory()">내용 읽으러 가기</div>
+            </div>
+            <div>
+                <!-- 페이지가 story 전개시에만 활성화하여 사용
+                <div class="nonclick">페이지 이동</div>
+                <div onclick="prevPage()">&lt;</div>
+                <div onclick="nextPage()">&gt;</div>
+                -->
+            </div>
+        </div>
+        <div class="contents" id="main">
+            <h2 style="padding-bottom:.5em;"><span style="font-family:'Kirang Haerang', cursive; font-size:1.5em;">양치기 소년</span>&nbsp;을 읽으러 와주셔서 감사합니다.</h2>
+            <hr>
+            <div class="main">
+                <h2>양치기 소년은 이솝 우화의 일부로 '거짓말을 하지 말자'는 교훈을 주는 이야기입니다.</h2>
+                <h3>가급적 16:9 비율의, 고해상도 PC에서 감상하실 것을 권장합니다.</h3>
+                <div class="nd_sqaure_box_list">
+                    <div class="rd_sqaure_box_list">
+                        <div class="box write" onclick="goWriter()"><span>작가 소개 보러 가기</span></div>
+                        <div class="box char" onclick="goChar()"><span>캐릭터 소개 보러 가기</span></div>
+                        <div class="box story" onclick="goStory()"><span>읽으러 가기</span></div>
+                    </div>
+                    <div class="rd_sqaure_box_list">
+                        <div class="box fable" onclick="goLink('https://ko.wikipedia.org/wiki/%EC%9A%B0%ED%99%94')"><span>(외부링크)<br>우화에 대해 알아보기</span></div>
+                        <div class="box git" onclick="alert('기말고사 제출마감 후 일주일 이내로 업로드할 예정입니다.'); goLink('https://github.com/DevJeyeong/SCH_WebProject')"><span>(외부링크)<br>이 페이지의 GitHub Repository로 이동</span></div>
+                    </div>        
+                </div>
+            </div>
+            <div class="main_footer">
+                <span>Copyright ⓒ 2022, All Right Reserved by</span>
+                <img src="./style/SCH.jpg" style="height:24px; cursor:pointer" onclick="goLink('https://home.sch.ac.kr/sch/index.jsp')" alt="순천향대학교(SoonCheonHyang Univ.)" title="순천향대 홈페이지로 이동">
+                <span>컴퓨터소프트웨어공학과 20223517 방제영</span>
+            </div>
+        </div>
+    </body>
+</html>

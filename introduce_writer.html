@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Kirang+Haerang&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Poor+Story&family=Yeon+Sung&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style/style.css">
+        <script src="./style/script.js"></script>
+        <title>양치기 소년</title>
+    </head>
+    <body>
+        <div class="header" id="head">
+            <div>
+                <div onclick="goMain()">양치기 소년</div>
+                <div class="effect" onclick="goWriter()">작가 소개</div>
+                <div onclick="goChar()">캐릭터 소개</div>
+                <div onclick="goStory()">내용 읽으러 가기</div>
+            </div>
+            <div>
+                <!-- 페이지가 story 전개시에만 활성화하여 사용
+                <div class="nonclick">페이지 이동</div>
+                <div onclick="prevPage()">&lt;</div>
+                <div onclick="nextPage()">&gt;</div>
+                -->
+            </div>
+        </div>
+        <div class="contents" id="main">
+            <h2 style="padding-bottom:.5em;"><span style="font-family:'Kirang Haerang', cursive; font-size:1.5em;">양치기 소년</span>&nbsp;의 작가</h2>
+            <hr>
+            <table class="introduce_writer">
+                <tbody>
+                    <tr>
+                        <td colspan="2"><img class="profile_pic" src="./style/aesop.png" alt="아이소포스(이솝)의 사진"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h3><b>아이소포스(이솝) | Aisōpos(Aesop)</b></h3>(B.C 620 ~ B.C 564)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h4>이야기와 작가에 관한 간단한 소개</h4></td>
+                    </tr>
+                    <tr>
+                        <td>제목 (Title)</td>
+                        <td>작가 (Writer)</td>
+                    </tr>
+                    <tr>
+                        <td>양치기 소년</td>
+                        <td>이솝 지음 (이솝 우화)</td>
+                    </tr>
+                    <tr>
+                        <td>The Boy Who Cried Wolf(the shepherd boy and the wolf)</td>
+                        <td>Aesop (Aesop's fable)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h4>소 개</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            이 이야기는 기본적으로 도덕적인 명제나 인간이 해야할 도리를 이야기화 해낸 <a class="linker" href="https://ko.wikipedia.org/wiki/%EC%9A%B0%ED%99%94" title="위키피디아 - 우화 문서">우화</a>이다.<br>
+                            이 우화는 대개의 경우 동물이 등장하지만 이솝의 우화의 경우에는 사람의 어리석은 행동을 풍자함으로서<br>
+                            읽는 이에게 하여금 교훈을 주려는 의도로 지어낸 이야기가 많다.
+                            <br><br>
+                            특히 이 '양치기 소년'의 경우에는 거짓말으로 하여금 사람들의 미움과 불신을 사지 말아야 한다는 교훈을 전달한다.<br>
+                            실제 극중에서도 양치기 소년이 처음 늑대 떼가 나타났다고 할 때에는 사람들이 믿어주었지만, 날이 가면 갈수록 느는 거짓말에<br>
+                            마을 주민들은 환멸감과 불신감을 느꼈고, 실제 상황에서는 더 이상 주민들이 도움을 주기 위해 찾아오지 않아 양들이 잡아먹히는<br>
+                            전개로 끝이 나는 이야기이다. 이러한 사람이 거짓말을 한다는 어리석은 행동을 풍자해 주로 어린이들에게<br>
+                            '거짓말은 나쁜 것이다'라는 선한 인식을 심어주고 있으며, 이솝은 이 외에도 여러 우화를 집필했다.<br>
+                            우리가 흔히 아는
+                            <a class="linker" href="https://ko.wikipedia.org/wiki/%EA%B0%9C%EB%AF%B8%EC%99%80_%EB%B2%A0%EC%A7%B1%EC%9D%B4"><b>개미와 배짱이</b></a>,
+                            <a class="linker" href="https://ko.wikipedia.org/wiki/%EA%B8%88%EB%8F%84%EB%81%BC_%EC%9D%80%EB%8F%84%EB%81%BC"><b>금도끼 은도끼</b></a>,
+                            <a class="linker" href="https://ko.wikipedia.org/wiki/%EC%97%AC%EC%9A%B0%EC%99%80_%EB%91%90%EB%A3%A8%EB%AF%B8"><b>>여우와 두루미</b></a>,
+                            <a class="linker" href="https://ko.wikipedia.org/wiki/%EC%97%AC%EC%9A%B0%EC%99%80_%ED%8F%AC%EB%8F%84"><b>여우와 포도</b></a>,
+                            <a class="linker" href="https://ko.wikipedia.org/wiki/%ED%86%A0%EB%81%BC%EC%99%80_%EA%B1%B0%EB%B6%81%EC%9D%B4"><b>토끼와 거북이</b></a>
+                            등의 많은, 우리가 흔히 아는 우화들을 집필했다.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="main_footer">
+                <span>Copyright ⓒ 2022, All Right Reserved by</span>
+                <img src="./style/SCH.jpg" style="height:24px; cursor:pointer" onclick="goLink('https://home.sch.ac.kr/sch/index.jsp')" alt="순천향대학교(SoonCheonHyang Univ.)" title="순천향대 홈페이지로 이동">
+                <span>컴퓨터소프트웨어공학과 20223517 방제영</span>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Kirang+Haerang&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Poor+Story&family=Yeon+Sung&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style/style.css">
+        <script src="./style/script.js"></script>
+        <title>양치기 소년</title>
+    </head>
+    <body>
+        <div class="header" id="head">
+            <div>
+                <div onclick="goMain()">양치기 소년</div>
+                <div onclick="goWriter()">작가 소개</div>
+                <div class="effect" onclick="goChar()">캐릭터 소개</div>
+                <div onclick="goStory()">내용 읽으러 가기</div>
+            </div>
+            <div>
+                <!-- 페이지가 story 전개시에만 활성화하여 사용
+                <div class="nonclick">페이지 이동</div>
+                <div onclick="prevPage()">&lt;</div>
+                <div onclick="nextPage()">&gt;</div>
+                -->
+            </div>
+        </div>
+        <div class="contents" id="main">
+            <h2 style="padding-bottom:.5em;"><span style="font-family:'Kirang Haerang', cursive; font-size:1.5em;">양치기 소년</span>&nbsp;의 등장 캐릭터</h2>
+            <hr>
+            <table class="introduce_char">
+                <tr>
+                    <td rowspan="2" class="img_table"><img class="profile_pic" src="./style/boy.png" alt="양치기 소년"></td>
+                    <td><h2 class="profile_text">양치기 소년</h2></td>
+                </tr>
+                <tr>
+                    <td>
+                        목장에서 양을 지키고 있는 양치기 소년.<br>
+                        늘상 양을 지키기에 지루해하며 늑대가 있다는 소문에 늑대가 나타났다고 거짓말을 함<br>
+                        재미를 위해 거짓말을 일삼아오다 실질적인 늑대의 위험에선 아무의 도움도 받지 못하는 처지가 됨.
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="img_table"><img class="profile_pic" src="./style/wolf.jpg" alt="늑대"></td>
+                    <td><h2 class="profile_text">늑대</h2></td>
+                </tr>
+                <tr>
+                    <td>
+                        양치기 소년이 한 거짓말로 인해 거짓말은 나쁘다는 교훈을 주는 늑대<br>
+                        늘상 거짓말이였지만 실제로 나타나 양들을 공격하며 양치기 소년이<br>
+                        자신이 늘상 거짓말을 밥 먹듯이 했다는 큰 잘못을 했음을 깨닫게 하는 캐릭터
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><img class="profile_pic" src="./style/people.jpg" alt="마을 주민들"></td>
+                    <td><h2 class="profile_text">마을 주민들</h2></td>
+                </tr>
+                <tr>
+                    <td>
+                        마을에 있는 선량한 마을 주민들<br>
+                        양치기 소년의 도움 요청에 진실인줄 알고 달려가 도움을 주려 하지만 거짓말인것을 알고 화를 내며 돌아감<br>
+                        늘상 양치기 소년의 거짓말에 속아와 진짜 늑대의 습격에는 도와주지 않음.
+                    </td>
+                </tr>
+            </table>
+            <div class="main_footer">
+                <span>Copyright ⓒ 2022, All Right Reserved by</span>
+                <img src="./style/SCH.jpg" style="height:24px; cursor:pointer" onclick="goLink('https://home.sch.ac.kr/sch/index.jsp')" alt="순천향대학교(SoonCheonHyang Univ.)" title="순천향대 홈페이지로 이동">
+                <span>컴퓨터소프트웨어공학과 20223517 방제영</span>
+            </div>
+        </div>
+    </body>
+</html>
